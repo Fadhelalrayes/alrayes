@@ -6,78 +6,121 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Cairo', sans-serif; background: #f5f7fb; color: #243765; }
-    .hero-banner {
-      background-image: url('https://j.top4top.io/p_3527jy53v0.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 60vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
+    :root{
+      --bg:#fafaf9;           /* خلفية هادئة */
+      --card:#ffffff;         /* بطاقات بيضاء صافية */
+      --ink:#1f2937;          /* نص رمادي داكن محترف */
+      --muted:#6b7280;        /* نص ثانوي */
+      --line:#e5e7eb;         /* حدود خفيفة */
+      --accent:#b0892f;       /* لمسة ذهبية راقية */
     }
-    .hero-banner::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-    }
-    .hero-content { position: relative; z-index: 10; }
-    .section { background: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color:#324e95; }
+    html,body{height:100%}
+    body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);margin:0}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    /* رأس هادئ بدون كتابة فوق الصورة */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;margin:24px 0 32px}
+    @media(min-width:900px){.hero{grid-template-columns:520px 1fr}}
+    .figure{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.04)}
+    .figure img{display:block;width:100%;height:100%;object-fit:cover}
+    .cap{padding:10px 14px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+    .title h1{font-family:'Amiri',serif;font-weight:700;letter-spacing:.2px;margin:0 0 10px;font-size:clamp(28px,5vw,40px)}
+    .sub{color:var(--muted);line-height:1.9}
+    .divider{height:2px;background:linear-gradient(to left,transparent,var(--accent),transparent);margin:18px 0 0;border-radius:2px}/* بطاقات الأقسام */
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin:18px 0;box-shadow:0 6px 16px rgba(0,0,0,.03)}
+h2{font-family:'Amiri',serif;font-size:1.35rem;margin:0 0 12px;position:relative}
+h2::after{content:"";position:absolute;inset-inline-end:0;bottom:-6px;width:72px;height:2px;background:var(--accent);opacity:.6;border-radius:2px}
+p,li{line-height:2}
+ul{padding-inline-start:18px;margin:0}
+
+/* شريط علوي بسيط */
+.topbar{position:sticky;top:0;background:rgba(250,250,249,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:20}
+.topbar .wrap{display:flex;align-items:center;gap:14px}
+.brand{font-family:'Amiri',serif;font-weight:700}
+.spacer{flex:1}
+.btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:.9rem;cursor:pointer}
+
+/* الطباعة */
+@media print{
+  .topbar,.cap,.btn{display:none!important}
+  body{background:#fff}
+  section{break-inside:avoid}
+}
+
   </style>
 </head>
 <body>
-  <header class="hero-banner">
-    <div class="hero-content">
-      <h1 class="text-4xl font-extrabold mb-4">الشيخ عباس الريس (1938–1991)</h1>
-      <p class="text-lg max-w-2xl mx-auto">عالمٌ بحريني، شاعرٌ وخطيب، ومربٍ ترك أثرًا في قلوب الناس وعقولهم</p>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand">سيرة الشيخ عباس الريس</div>
+      <div class="spacer"></div>
+      <button class="btn" onclick="window.print()">تحميل PDF</button>
     </div>
-  </header>  <main class="container mx-auto px-4 py-10 max-w-5xl">
-    <section class="section">
-      <h2>1) النشأة والخلفية العائلية</h2>
-      <p>وُلد الشيخ عباس بن أحمد بن علي بن أحمد بن سالم بن حسين بن أحمد بن علي بن الشيخ عباس الريس في <b>قرية الدراز</b>، إحدى قرى شمال غرب البحرين، عام <b>1938م</b>.</p>
-    </section><section class="section">
-  <h2>2) الدراسة والتعليم</h2>
-  <p>بدأ تعليمه في <b>المدرسة البديع الابتدائية</b> ثم <b>المنامة الثانوية</b> (القسم العلمي) وتخرج عامي 1960–1961 بشهادة المعلمين. عمل بالتدريس ثلاث سنوات. تلقى مبادئ العلوم الدينية على يد <b>السيد علوي الغريفي</b>.</p>
-  <p>عام 1964م سافر إلى <b>النجف الأشرف</b> مع الشيخ عيسى أحمد قاسم، ودرس الفقه والأصول والبلاغة والمنطق عند كبار العلماء: الشيخ حبيب الطرفي، آية الله حسين زائر دهام، آية الله عبد المحسن الغراوي، حجة الإسلام علاء الدين بحر العلوم، الشيخ عبد الهادي الفضلي، وغيرهم.</p>
+  </header>  <main class="wrap">
+    <!-- صورة بدون كتابة عليها -->
+    <div class="hero">
+      <figure class="figure" aria-label="صورة الشيخ عباس الريس">
+        <img src="https://j.top4top.io/p_3527jy53v0.jpg" alt="الشيخ عباس الريس" />
+        <figcaption class="cap">صورة الشيخ عباس الريس — مدمجة بإطار محايد دون أي نص فوقها.</figcaption>
+      </figure>
+      <div class="title">
+        <h1>الشيخ عباس الريس <span style="color:var(--muted);font-weight:400">(1938–1991)</span></h1>
+        <p class="sub">عالمٌ بحريني وخطيبٌ وشاعرٌ ترك أثرًا علميًا ومجتمعيًا بارزًا. هذه الصفحة تعرض محطات حياته بإيجاز مهني وأنيق.</p>
+        <div class="divider"></div>
+      </div>
+    </div><!-- 1. النشأة -->
+<section>
+  <h2>النشأة والخلفية العائلية</h2>
+  <p>وُلد الشيخ عباس بن أحمد بن علي بن أحمد بن سالم بن حسين بن أحمد بن علي بن الشيخ عباس الريس في <strong>قرية الدراز</strong>، شمال غرب البحرين، عام <strong>1938م</strong>.</p>
 </section>
 
-<section class="section">
-  <h2>3) العودة إلى البحرين ومساهماته</h2>
-  <ul class="list-disc pr-6 space-y-2">
-    <li>أصبح منزله مدرسة علمية لطلبة العلوم الفقهية، واستُعان به للإفتاء وحل القضايا الاجتماعية.</li>
-    <li>انتُخب نائبًا في <b>المجلس الوطني البحريني</b> عام 1970م ممثلاً عن المنطقة الغربية.</li>
-    <li>شارك في تأسيس <b>جمعية التوعية الإسلامية</b> بالبحرين امتدادًا لخط حزب الدعوة الإسلامية.</li>
+<!-- 2. الدراسة والتعليم -->
+<section>
+  <h2>الدراسة والتعليم</h2>
+  <p>بدأ في <strong>المدرسة البديع الابتدائية</strong> ثم <strong>المنامة الثانوية</strong> (القسم العلمي)، وتخرج عامي 1960–1961 بشهادة المعلمين وعمل بالتدريس ثلاث سنوات. وخلال ذلك تلقّى مبادئ العلوم الدينية على يد <strong>السيد علوي الغريفي</strong>.</p>
+  <p>عام 1964م سافر إلى <strong>النجف الأشرف</strong> برفقة الشيخ <strong>عيسى أحمد قاسم</strong>. تتلمذ على مشايخ كبار في الفقه والأصول والبلاغة والمنطق، منهم: الشيخ <strong>حبيب الطرفي</strong>، آية الله <strong>حسين زائر دهام</strong>، آية الله <strong>عبد المحسن الغراوي</strong>، حجة الإسلام <strong>علاء الدين بحر العلوم</strong>، والشيخ <strong>عبد الهادي الفضلي</strong>، كما درس العربية والفقه مع <strong>علي الناصر الأحسائي</strong>، <strong>محمد جواد الأحسائي</strong>، و<strong>علي الجزائري</strong>.</p>
+</section>
+
+<!-- 3. العودة والمساهمات -->
+<section>
+  <h2>العودة إلى البحرين ومساهماته</h2>
+  <ul>
+    <li>تحوّل منزله إلى مدرسة علمية لطلبة العلوم الفقهية، مع الاستعانة به للإفتاء وحل القضايا الاجتماعية.</li>
+    <li>انتُخب نائبًا في <strong>المجلس الوطني البحريني</strong> بعد الاستقلال عام <strong>1970م</strong> ممثلًا عن المنطقة الغربية.</li>
+    <li>ساهم في تأسيس <strong>جمعية التوعية الإسلامية</strong> امتدادًا لخط «حزب الدعوة الإسلامية».</li>
   </ul>
 </section>
 
-<section class="section">
-  <h2>4) الشعر والخطابة</h2>
-  <p>اشتهر بأسلوبه الخاص في الشعر العربي الفصيح وخطابته المميزة. نال <b>المركز الأول</b> في مسابقة بلندن بقصيدة في رثاء السيدة رقية (ع). كتب أبياتًا مؤثرة عند وفاة السيد محسن الحكيم، وبرز كخطيب في المجالس الحسينية بخطبه النبطية.</p>
+<!-- 4. الشعر والخطابة -->
+<section>
+  <h2>الشعر والخطابة</h2>
+  <p>شاعرٌ وخطيبٌ ذو أسلوب خاص في العربية الفصحى. لاقت قصائده في رثاء أهل البيت (ع) تقديرًا واسعًا؛ ومن أعماله قصيدة في رثاء <strong>السيدة رقية بنت الإمام الحسين (ع)</strong> التي نالت <strong>المركز الأول</strong> في مسابقة لندن لبلاغتها.</p>
+  <p>ومن أبرز مواقفه الشعرية: نظَم أبياتًا عند وفاة آية الله العظمى <strong>السيد محسن الحكيم</strong> في النجف، وعلّقها على راية باسم الجالية البحرينية فأثارت إعجاب العلماء لمعناها العميق. عُرف كذلك بخُطبِه النبطية في مجالس العزاء الحسينية.</p>
 </section>
 
-<section class="section">
-  <h2>5) المؤلفات</h2>
-  <ul class="list-disc pr-6 space-y-2">
-    <li><b>أصول المعرفة في شرح دعاء عرفة</b> – أربعة أجزاء تجمع الفلسفة والمنطق والتفسير والشعر.</li>
-    <li><b>درر المدح والرثاء</b> – مجموعة من قصائد المدح والرثاء لأهل البيت (ع).</li>
+<!-- 5. المؤلفات -->
+<section>
+  <h2>المؤلفات</h2>
+  <ul>
+    <li><strong>أصول المعرفة في شرح دعاء عرفة</strong>: مؤلَّفٌ في أربعة أجزاء يجمع الفلسفة والمنطق والتفسير والشعر.</li>
+    <li><strong>درر المدح والرثاء</strong>: مختارات من المدائح والمراثي في أهل بيت النبوة (ع).</li>
   </ul>
 </section>
 
-<section class="section">
-  <h2>6) الوفاة والاستذكار</h2>
-  <p>زار الإمام الرضا (ع) في إيران في نوفمبر 1991م، وعاد إلى البحرين في 21 ديسمبر. تُوفي يوم الجمعة 27 ديسمبر 1991م (20 جمادى الثانية 1412هـ)، يوم مولد السيدة فاطمة الزهراء (ع). شيعه آلاف المؤمنين في جنازة مهيبة.</p>
+<!-- 6. الوفاة والاستذكار -->
+<section>
+  <h2>الوفاة والاستذكار</h2>
+  <p>زار الإمام <strong>الرضا (ع)</strong> في إيران بتاريخ <strong>23 نوفمبر 1991م</strong>، وعاد إلى البحرين مساء <strong>21 ديسمبر 1991م</strong> (ليلة الأحد 14 جمادى الثانية 1412هـ). تُوفّي يوم <strong>الجمعة 27 ديسمبر 1991م</strong> (<strong>20 جمادى الثانية 1412هـ</strong>)، وهو يوم مولد <strong>السيدة فاطمة الزهراء (ع)</strong>. شُيّع في جنازة مهيبة حضرها الآلاف.</p>
 </section>
 
-  </main>  <footer class="text-center text-sm py-6 border-t border-gray-200">
-    © 2025 — صفحة سيرة الشيخ عباس الريس. تصميم إبداعي حديث.
-  </footer>
-</body>
+<div style="height:8px"></div>
+
+  </main>  <footer style="border-top:1px solid var(--line);padding:16px 0;color:var(--muted)">
+    <div class="wrap" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+      <small>المحتوى مُنسّق بعناية واحترام لسيرة الشيخ.</small>
+      <small style="opacity:.9">آخر تعديل: <span id="ts"></span></small>
+    </div>
+  </footer>  <script>
+    document.getElementById('ts').textContent = new Date().toLocaleDateString('ar', { year:'numeric', month:'long', day:'numeric'});
+  </script></body>
 </html>
