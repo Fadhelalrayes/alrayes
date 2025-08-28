@@ -3,124 +3,71 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>سيرة الشيخ عباس الريس (1938–1991)</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#fafaf9;           /* خلفية هادئة */
-      --card:#ffffff;         /* بطاقات بيضاء صافية */
-      --ink:#1f2937;          /* نص رمادي داكن محترف */
-      --muted:#6b7280;        /* نص ثانوي */
-      --line:#e5e7eb;         /* حدود خفيفة */
-      --accent:#b0892f;       /* لمسة ذهبية راقية */
-    }
-    html,body{height:100%}
-    body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);margin:0}
-    .wrap{max-width:1100px;margin:auto;padding:24px}
-    /* رأس هادئ بدون كتابة فوق الصورة */
-    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;margin:24px 0 32px}
-    @media(min-width:900px){.hero{grid-template-columns:520px 1fr}}
-    .figure{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.04)}
-    .figure img{display:block;width:100%;height:100%;object-fit:cover}
-    .cap{padding:10px 14px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-    .title h1{font-family:'Amiri',serif;font-weight:700;letter-spacing:.2px;margin:0 0 10px;font-size:clamp(28px,5vw,40px)}
-    .sub{color:var(--muted);line-height:1.9}
-    .divider{height:2px;background:linear-gradient(to left,transparent,var(--accent),transparent);margin:18px 0 0;border-radius:2px}/* بطاقات الأقسام */
-section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin:18px 0;box-shadow:0 6px 16px rgba(0,0,0,.03)}
-h2{font-family:'Amiri',serif;font-size:1.35rem;margin:0 0 12px;position:relative}
-h2::after{content:"";position:absolute;inset-inline-end:0;bottom:-6px;width:72px;height:2px;background:var(--accent);opacity:.6;border-radius:2px}
-p,li{line-height:2}
-ul{padding-inline-start:18px;margin:0}
-
-/* شريط علوي بسيط */
-.topbar{position:sticky;top:0;background:rgba(250,250,249,.85);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:20}
-.topbar .wrap{display:flex;align-items:center;gap:14px}
-.brand{font-family:'Amiri',serif;font-weight:700}
-.spacer{flex:1}
-.btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:.9rem;cursor:pointer}
-
-/* الطباعة */
-@media print{
-  .topbar,.cap,.btn{display:none!important}
-  body{background:#fff}
-  section{break-inside:avoid}
-}
-
+    body { font-family: 'Cairo', sans-serif; background:#fafafa; color:#222; margin:0; }
+    .wrap { max-width:900px; margin:auto; padding:20px; }
+    header { margin:20px 0; text-align:center; }
+    header img { width:100%; border-radius:12px; border:1px solid #ddd; }
+    header figcaption { margin-top:8px; font-size:15px; color:#444; }
+    h1 { font-family:'Amiri', serif; font-weight:700; margin:20px 0 10px; font-size:26px; text-align:center; }
+    h2 { font-family:'Amiri', serif; font-weight:700; margin:18px 0 10px; font-size:20px; border-right:4px solid #b0892f; padding-right:8px; }
+    p, li { font-size:16px; line-height:1.8; margin:8px 0; }
+    section { background:#fff; border:1px solid #e5e5e5; border-radius:10px; padding:18px; margin:16px 0; }
+    ul { padding-right:20px; }
+    footer { text-align:center; font-size:14px; color:#666; padding:20px 0; border-top:1px solid #ddd; margin-top:30px; }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap">
-      <div class="brand">سيرة الشيخ عباس الريس</div>
-      <div class="spacer"></div>
-      <button class="btn" onclick="window.print()">تحميل PDF</button>
-    </div>
-  </header>  <main class="wrap">
-    <!-- صورة بدون كتابة عليها -->
-    <div class="hero">
-      <figure class="figure" aria-label="صورة الشيخ عباس الريس">
+  <div class="wrap">
+    <header>
+      <figure>
         <img src="https://j.top4top.io/p_3527jy53v0.jpg" alt="الشيخ عباس الريس" />
-        <figcaption class="cap">صورة الشيخ عباس الريس — مدمجة بإطار محايد دون أي نص فوقها.</figcaption>
+        <figcaption>الشيخ عباس الريس</figcaption>
       </figure>
-      <div class="title">
-        <h1>الشيخ عباس الريس <span style="color:var(--muted);font-weight:400">(1938–1991)</span></h1>
-        <p class="sub">عالمٌ بحريني وخطيبٌ وشاعرٌ ترك أثرًا علميًا ومجتمعيًا بارزًا. هذه الصفحة تعرض محطات حياته بإيجاز مهني وأنيق.</p>
-        <div class="divider"></div>
-      </div>
-    </div><!-- 1. النشأة -->
-<section>
+      <h1>الشيخ عباس الريس (1938–1991)</h1>
+    </header><section>
   <h2>النشأة والخلفية العائلية</h2>
-  <p>وُلد الشيخ عباس بن أحمد بن علي بن أحمد بن سالم بن حسين بن أحمد بن علي بن الشيخ عباس الريس في <strong>قرية الدراز</strong>، شمال غرب البحرين، عام <strong>1938م</strong>.</p>
+  <p>وُلد الشيخ عباس بن أحمد بن علي بن أحمد بن سالم بن حسين بن أحمد بن علي بن الشيخ عباس الريس في قرية الدراز، شمال غرب البحرين، عام 1938م.</p>
 </section>
 
-<!-- 2. الدراسة والتعليم -->
 <section>
   <h2>الدراسة والتعليم</h2>
-  <p>بدأ في <strong>المدرسة البديع الابتدائية</strong> ثم <strong>المنامة الثانوية</strong> (القسم العلمي)، وتخرج عامي 1960–1961 بشهادة المعلمين وعمل بالتدريس ثلاث سنوات. وخلال ذلك تلقّى مبادئ العلوم الدينية على يد <strong>السيد علوي الغريفي</strong>.</p>
-  <p>عام 1964م سافر إلى <strong>النجف الأشرف</strong> برفقة الشيخ <strong>عيسى أحمد قاسم</strong>. تتلمذ على مشايخ كبار في الفقه والأصول والبلاغة والمنطق، منهم: الشيخ <strong>حبيب الطرفي</strong>، آية الله <strong>حسين زائر دهام</strong>، آية الله <strong>عبد المحسن الغراوي</strong>، حجة الإسلام <strong>علاء الدين بحر العلوم</strong>، والشيخ <strong>عبد الهادي الفضلي</strong>، كما درس العربية والفقه مع <strong>علي الناصر الأحسائي</strong>، <strong>محمد جواد الأحسائي</strong>، و<strong>علي الجزائري</strong>.</p>
+  <p>بدأ في المدرسة البديع الابتدائية ثم المنامة الثانوية (القسم العلمي)، وتخرج عامي 1960–1961 بشهادة المعلمين وعمل بالتدريس ثلاث سنوات. تلقّى العلوم الدينية على يد السيد علوي الغريفي.</p>
+  <p>عام 1964م سافر إلى النجف الأشرف مع الشيخ عيسى أحمد قاسم. درس الفقه والأصول والبلاغة والمنطق على يد: الشيخ حبيب الطرفي، آية الله حسين زائر دهام، آية الله عبد المحسن الغراوي، حجة الإسلام علاء الدين بحر العلوم، الشيخ عبد الهادي الفضلي، كما درس مع علي الناصر الأحسائي، محمد جواد الأحسائي، علي الجزائري.</p>
 </section>
 
-<!-- 3. العودة والمساهمات -->
 <section>
   <h2>العودة إلى البحرين ومساهماته</h2>
   <ul>
-    <li>تحوّل منزله إلى مدرسة علمية لطلبة العلوم الفقهية، مع الاستعانة به للإفتاء وحل القضايا الاجتماعية.</li>
-    <li>انتُخب نائبًا في <strong>المجلس الوطني البحريني</strong> بعد الاستقلال عام <strong>1970م</strong> ممثلًا عن المنطقة الغربية.</li>
-    <li>ساهم في تأسيس <strong>جمعية التوعية الإسلامية</strong> امتدادًا لخط «حزب الدعوة الإسلامية».</li>
+    <li>تحوّل منزله إلى مدرسة علمية لطلبة العلوم الفقهية.</li>
+    <li>انتُخب نائبًا في المجلس الوطني البحريني عام 1970م ممثلًا عن المنطقة الغربية.</li>
+    <li>شارك في تأسيس جمعية التوعية الإسلامية امتدادًا لخط حزب الدعوة الإسلامية.</li>
   </ul>
 </section>
 
-<!-- 4. الشعر والخطابة -->
 <section>
   <h2>الشعر والخطابة</h2>
-  <p>شاعرٌ وخطيبٌ ذو أسلوب خاص في العربية الفصحى. لاقت قصائده في رثاء أهل البيت (ع) تقديرًا واسعًا؛ ومن أعماله قصيدة في رثاء <strong>السيدة رقية بنت الإمام الحسين (ع)</strong> التي نالت <strong>المركز الأول</strong> في مسابقة لندن لبلاغتها.</p>
-  <p>ومن أبرز مواقفه الشعرية: نظَم أبياتًا عند وفاة آية الله العظمى <strong>السيد محسن الحكيم</strong> في النجف، وعلّقها على راية باسم الجالية البحرينية فأثارت إعجاب العلماء لمعناها العميق. عُرف كذلك بخُطبِه النبطية في مجالس العزاء الحسينية.</p>
+  <p>اشتهر بأسلوبه الخاص في الشعر العربي الفصيح وخطابته. نال المركز الأول في مسابقة بلندن بقصيدة في رثاء السيدة رقية (ع). كتب أبياتًا عند وفاة السيد محسن الحكيم وألقى خطبًا نبطية مشهورة في المجالس الحسينية.</p>
 </section>
 
-<!-- 5. المؤلفات -->
 <section>
   <h2>المؤلفات</h2>
   <ul>
-    <li><strong>أصول المعرفة في شرح دعاء عرفة</strong>: مؤلَّفٌ في أربعة أجزاء يجمع الفلسفة والمنطق والتفسير والشعر.</li>
-    <li><strong>درر المدح والرثاء</strong>: مختارات من المدائح والمراثي في أهل بيت النبوة (ع).</li>
+    <li>أصول المعرفة في شرح دعاء عرفة: أربعة أجزاء تجمع الفلسفة والمنطق والتفسير والشعر.</li>
+    <li>درر المدح والرثاء: مجموعة قصائد مدح ورثاء لأهل بيت النبوة.</li>
   </ul>
 </section>
 
-<!-- 6. الوفاة والاستذكار -->
 <section>
   <h2>الوفاة والاستذكار</h2>
-  <p>زار الإمام <strong>الرضا (ع)</strong> في إيران بتاريخ <strong>23 نوفمبر 1991م</strong>، وعاد إلى البحرين مساء <strong>21 ديسمبر 1991م</strong> (ليلة الأحد 14 جمادى الثانية 1412هـ). تُوفّي يوم <strong>الجمعة 27 ديسمبر 1991م</strong> (<strong>20 جمادى الثانية 1412هـ</strong>)، وهو يوم مولد <strong>السيدة فاطمة الزهراء (ع)</strong>. شُيّع في جنازة مهيبة حضرها الآلاف.</p>
+  <p>زار الإمام الرضا (ع) في إيران في نوفمبر 1991م، وعاد إلى البحرين في 21 ديسمبر. تُوفي يوم الجمعة 27 ديسمبر 1991م (20 جمادى الثانية 1412هـ)، يوم مولد السيدة فاطمة الزهراء (ع). شيعه الآلاف في جنازة مهيبة.</p>
 </section>
 
-<div style="height:8px"></div>
+<footer>
+  © 2025 — سيرة الشيخ عباس الريس
+</footer>
 
-  </main>  <footer style="border-top:1px solid var(--line);padding:16px 0;color:var(--muted)">
-    <div class="wrap" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
-      <small>المحتوى مُنسّق بعناية واحترام لسيرة الشيخ.</small>
-      <small style="opacity:.9">آخر تعديل: <span id="ts"></span></small>
-    </div>
-  </footer>  <script>
-    document.getElementById('ts').textContent = new Date().toLocaleDateString('ar', { year:'numeric', month:'long', day:'numeric'});
-  </script></body>
+  </div>
+</body>
 </html>
